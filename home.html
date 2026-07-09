@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
-<body onload="renderHome()">
+<body id="homeBody" onload="renderHome()">
+
   <div class="page-bg">
     <div class="page-overlay"></div>
     <div class="page-content">
@@ -23,3 +24,16 @@
   </div>
 </body>
 </html>
+<script>
+    try {
+        let data = JSON.parse(localStorage.getItem("data"));
+        if (data && data.homepageBackground) {
+            let body = document.getElementById("homeBody");
+            body.style.backgroundImage = `url('${data.homepageBackground}')`;
+            body.style.backgroundSize = "cover";
+            body.style.backgroundPosition = "center";
+        }
+    } catch (e) {
+        console.log("No background set yet.");
+    }
+</script>
