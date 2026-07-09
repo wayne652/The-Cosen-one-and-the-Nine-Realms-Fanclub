@@ -1,58 +1,9 @@
 {
-  "updates": [
-    {
-      "id": "u1",
-      "text": "New Realm Added: The Realm of Shadows",
-      "date": "2026-07-09"
-    }
-  ],
-  "realms": [
-    {
-      "id": "r1",
-      "name": "Storm Realm",
-      "logo": "images/storm-realm-logo.png",
-      "background": "images/storm-realm-bg.jpg",
-      "teasers": [
-        { "id": "t1", "text": "The lightning never sleeps." }
-      ],
-      "lore": [
-        { "id": "l1", "text": "Ancient storms forged the first kings..." }
-      ],
-      "characters": [
+    "users": [
         {
-          "id": "c1",
-          "name": "Arion the Flamebearer",
-          "description": "A warrior born from lightning and fire."
+            "email": "waynevanrooyenv46@gmail.com",
+            "password": "WA535vr10#",
+            "role": "admin"
         }
-      ],
-      "kingdoms": [
-        {
-          "id": "k1",
-          "name": "Thunderhold",
-          "logo": "images/thunderhold-logo.png"
-        }
-      ],
-      "maps": [
-        {
-          "id": "m1",
-          "image": "images/storm-realm-map.png"
-        }
-      ]
-    }
-  ],
-  "reviews": [
-    {
-      "id": "rev1",
-      "user": "Fan123",
-      "text": "Amazing worldbuilding!",
-      "approved": true
-    }
-  ],
-  "comments": [
-    {
-      "id": "com1",
-      "user": "ShadowWolf",
-      "text": "Can't wait for the next chapter!"
-    }
-  ]
+    ]
 }
