@@ -28,7 +28,7 @@ function loginUser() {
         window.location.href = "home.html"; // FANS go to fan page
     }
 }
-s
+
 }
 function forgotPassword() {
   alert("Password reset not active (no backend).");
