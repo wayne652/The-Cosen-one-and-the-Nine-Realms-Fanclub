@@ -3,31 +3,65 @@ let isAdmin = false;
 
 // Load data.json
 async function loadData() {
-    if (data) return;
     const res = await fetch('data.json');
     data = await res.json();
 }
 
-// Registration placeholder
-function fakeRegister() {
-    alert("Registration is local only for now.");
+// REAL REGISTRATION
+async function registerUser() {
+    await loadData();
+
+    let email = document.getElementById("regEmail").value;
+    let password = document.getElementById("regPassword").value;
+
+    if (!email || !password) {
+        alert("Please enter both email and password.");
+        return;
+    }
+
+    // Check if user already exists
+    let exists = data.users.find(u => u.email === email);
+    if (exists) {
+        alert("This email is already registered.");
+        return;
+    }
+
+    // Add new user
+    data.users.push({
+        email: email,
+        password: password,
+        role: "fan"
+    });
+
+    // Save updated data.json
+    await fetch('data.json', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+
+    alert("Registration successful! You can now log in.");
+    window.location.href = "index.html";
 }
 
-// LOGIN SYSTEM
-function loginUser() {
+// REAL LOGIN
+async function loginUser() {
+    await loadData();
+
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
-    // ADMIN LOGIN DETAILS
-    let adminEmail = "waynevanrooyenv46@gmail.com";
-    let adminPassword = "WA535vr10#";
+    let user = data.users.find(u => u.email === email && u.password === password);
 
-    if (email === adminEmail && password === adminPassword) {
-        isAdmin = true;
-        window.location.href = "admin.html"; // ADMIN PAGE
+    if (!user) {
+        alert("Incorrect email or password.");
+        return;
+    }
+
+    if (user.role === "admin") {
+        window.location.href = "admin.html";
     } else {
-        isAdmin = false;
-        window.location.href = "home.html"; // FAN PAGE
+        window.location.href = "home.html";
     }
 }
 
