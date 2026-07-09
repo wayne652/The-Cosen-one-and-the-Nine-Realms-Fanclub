@@ -11,9 +11,24 @@ async function loadData() {
 function fakeRegister() {
   alert("Registration is local only for now.");
 }
-function fakeLogin() {
-  // set isAdmin manually here if you want
-  window.location.href = "home.html";
+
+function loginUser() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    // YOUR admin email + password
+    let adminEmail = "waynevanrooyenv46@gmail.com";
+    let adminPassword = "WA535vr10#";
+
+    if (email === adminEmail && password === adminPassword) {
+        isAdmin = true;
+        window.location.href = "admin.html"; // YOU go to admin page
+    } else {
+        isAdmin = false;
+        window.location.href = "home.html"; // FANS go to fan page
+    }
+}
+s
 }
 function forgotPassword() {
   alert("Password reset not active (no backend).");
