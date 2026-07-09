@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nine Realms – Reviews</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body onload="renderReviews()">
+  <div class="page-bg">
+    <div class="page-overlay"></div>
+    <div class="page-content">
+      <div class="center-box">
+        <h1>Fan Reviews & Comments</h1>
+
+        <h2>Approved Reviews</h2>
+        <div id="reviewList"></div>
+
+        <h2>Write a Review</h2>
+        <input id="reviewUser" class="input-field" placeholder="Your name">
+        <textarea id="reviewText" class="input-field" placeholder="Your review..."></textarea>
+        <button class="btn btn-gold" onclick="submitReview()">Submit Review</button>
+
+        <h2>Comments</h2>
+        <div id="commentList"></div>
+
+        <input id="commentUser" class="input-field" placeholder="Your name">
+        <textarea id="commentText" class="input-field" placeholder="Your comment..."></textarea>
+        <button class="btn btn-gold" onclick="submitComment()">SubmitComment()">Submit Comment</button>
+
+        <button class="btn btn-gold-outline" onclick="goHome()">Back to Home</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

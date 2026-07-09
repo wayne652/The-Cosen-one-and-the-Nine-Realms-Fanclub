@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nine Realms – Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body onload="renderAdmin()">
+  <div class="page-bg">
+    <div class="page-overlay"></div>
+    <div class="page-content">
+      <div class="center-box">
+        <h1>Realms Control Panel</h1>
+
+        <h2>Updates / News</h2>
+        <div class="news-box" id="adminNewsBox"></div>
+        <button class="btn btn-admin admin-only" onclick="adminAddNews()">Add Update</button>
+
+        <h2>Realms</h2>
+        <div id="adminRealmList"></div>
+        <button class="btn btn-admin admin-only" onclick="adminAddRealm()">Add Realm</button>
+
+        <h2>Selected Realm Content</h2>
+        <div id="adminRealmContent"></div>
+
+        <button class="btn btn-admin admin-only" onclick="adminAddTeaser()">Add Teaser</button>
+        <button class="btn btn-admin admin-only" onclick="adminAddLore()">Add Lore</button>
+        <button class="btn btn-admin admin-only" onclick="adminAddCharacter()">Add Character</button>
+        <button class="btn btn-admin admin-only" onclick="adminAddKingdom()">Add Kingdom</button>
+        <button class="btn btn-admin admin-only" onclick="adminUploadMap()">Upload Map (URL)</button>
+
+        <h2>Reviews Moderation</h2>
+        <div id="adminReviewList"></div>
+        <button class="btn btn-admin admin-only" onclick="adminApproveReview()">Approve Review</button>
+        <button class="btn btn-admin admin-only" onclick="adminRemoveReview()">Remove Review</button>
+
+        <h2>Save Changes</h2>
+        <button class="btn btn-admin admin-only" onclick="downloadDataJson()">Download Updated data.json</button>
+
+        <button class="btn btn-gold-outline" onclick="goHome()">Back to Home</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

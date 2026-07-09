@@ -1,0 +1,130 @@
+:root {
+  --bg-main: #000000;
+  --red-deep: #8B0000;
+  --gold: #D4AF37;
+  --text-gold: #FFD700;
+  --box-radius: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-gold);
+}
+
+.page-bg {
+  position: relative;
+  min-height: 100vh;
+  background: url("your-background.jpg") center/cover no-repeat fixed;
+}
+
+.page-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.page-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.center-box {
+  max-width: 900px;
+  margin: 8vh auto 0;
+  padding: 30px 40px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: var(--box-radius);
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 25px var(--gold), 0 0 60px var(--gold);
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px;
+  color: var(--text-gold);
+  text-shadow: 0 0 8px var(--red-deep);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+  background: #050505;
+  color: var(--text-gold);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 6px 8px 0 0;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Fan buttons */
+.btn-gold {
+  background: var(--gold);
+  color: #000;
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 12px var(--red-deep);
+}
+.btn-gold-outline {
+  background: transparent;
+  color: var(--text-gold);
+  border: 1px solid var(--gold);
+}
+.btn-gold:hover {
+  box-shadow: 0 0 18px var(--red-deep), 0 0 30px var(--red-deep);
+}
+
+/* Admin buttons (red outline) */
+.btn-admin {
+  background: transparent;
+  color: var(--text-gold);
+  border: 1px solid var(--red-deep);
+  box-shadow: 0 0 10px var(--red-deep);
+}
+.btn-admin:hover {
+  box-shadow: 0 0 18px var(--red-deep), 0 0 30px var(--red-deep);
+}
+
+.link-red {
+  color: var(--red-deep);
+  cursor: pointer;
+}
+.link-red:hover {
+  text-shadow: 0 0 8px var(--gold);
+}
+
+.news-box {
+  margin-top: 20px;
+  padding: 12px 16px;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 15px var(--red-deep);
+}
+.news-item {
+  margin-bottom: 8px;
+}
+
+.realm-card {
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px var(--red-deep);
+}
+.realm-card:hover {
+  box-shadow: 0 0 18px var(--gold);
+}
